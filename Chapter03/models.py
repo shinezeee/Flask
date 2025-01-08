@@ -12,8 +12,8 @@ class User(db.Model) :
     email = db.Column(db.String(100), unique=True, nullable=False)
     boards = db.relationship('Board', back_populates='author', lazy='dynamic')
     # ㄴ> 양방향 관계
-    
-    
+    address = db.Column(db.String(120), unique=True, nullable=False)
+
 class Board(db.Model) :
     __tablename__ = "boards"
     
