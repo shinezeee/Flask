@@ -93,7 +93,7 @@ def create_posts_blueprint(mysql) :                             # 블루프린�
                 
             sql = "DELETE FROM posts WHERE id =%s"
             cursor.execute(sql,(id,))
-            mysql.connetion.commit()
+            mysql.connection.commit()
         
             return jsonify({"message":"Sussessfully Deleted Post."})
 
